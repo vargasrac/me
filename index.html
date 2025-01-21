@@ -8,78 +8,34 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<style>
-div.mycontainer {
-  width:100%;
-  overflow:auto;
-}
-div.mycontainer div {
-  width:50%;  
-  float:left;
-}
-</style>
-
-
 <body>
-<!-- <div class="mycontainer"> -->
-	<!-- Navbar -->
-	<div style="width:50%; float:left;">
-		 <nav class="navbar bg-light"> 
-		 <div class="container-fluid"> 
-			 <ul class="navbar-nav">
-				<li class="nav-item"> 
-					<a class="nav-link" href="#">Link 1</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link 2</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Link 3</a>
-				</li>
-			 </ul>
+
+<div class="container bg-light">
+	<div class="row p-4">
+		<div class="col">
+			<h1>Város</h1>
+			<p>Itt hangulatképeket találsz, szigorúan Budapestről. Ezen belül is Angyalföldről illetve Budafokról. A nem feltétlen szép helyek szép pillanatait szeretem megörökíteni.</p> 
 		</div>
-		</nav>
-		
-		<div class="container-fluid mt-3">
-	<h3>Carousel Example</h3>
-	<p>The following example shows how to create a basic carousel with indicators and controls.</p>
+	</div>
+	<div class="row p-4">
+		<div class="col">
+			<img src="city/beke.jpg" alt="Los Angeles" style="width:100%">
+		</div>
+		<div class="col-8">
+			<h2>Béke út</h2>
+			<p>Angyalföld egyik utolsó bérháza - kb 100 éves - előtt. Bizonyos pillanatokban ez az utca is tud gyönyörő lenni.</p> 
+		</div>
+	</div>
+	<div class="row p-4">
+		<div class="col">
+			<img src="city/margit.jpg" alt="Los Angeles" style="width:100%">
+		</div>
+		<div class="col-8">
+			<h2>Margit körút</h2>
+			<p>Nem szigorúan Angyalföld, de a 13. kerület határa. A Bem moziba menet, villamosra várva.</p> 
+		</div>
+	</div>
 </div>
-	</div>
-	
-	<!-- Carousel -->
-	<div id="demo" class="carousel slide" data-bs-ride="carousel" style="background-color:#D9EEE1;width:50%; float:left;">
-	
-		<!-- Indicators/dots -->
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-			<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-			<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-		</div>
-		
-		<!-- The slideshow/carousel -->
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-			<img src="city/beke.jpg" alt="Los Angeles" class="d-block" style="width:100%">
-			</div>
-			<div class="carousel-item">
-			<img src="city/margit.jpg" alt="Chicago" class="d-block" style="width:100%">
-			</div>
-			<div class="carousel-item">
-			<img src="city/karolyrobert.jpg" alt="New York" class="d-block" style="width:100%">
-			</div>
-		</div>
-		
-		<!-- Left and right controls/icons -->
-		<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon"></span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-			<span class="carousel-control-next-icon"></span>
-		</button>
-	</div>
-<!-- </div>	 -->
-
-
 
 </body>
 </html>
