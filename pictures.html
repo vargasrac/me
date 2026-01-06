@@ -10,117 +10,136 @@
 
 <body>
 
-<div class="container bg-light">
-	<nav class="navbar navbar-expand-sm bg-light navbar-light">
-		<div class="container bg-light">
-			<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link" href="./index.html">Város</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./zold.html">Zöldterület</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link active" href="./pictures.html">Festmények</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./vue.html">VUE.js</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="./me.html">Rólam</a>
-			</li>
-			</ul>
+	<div class="container bg-light">
+		<nav class="navbar navbar-expand-sm bg-light navbar-light">
+			<div class="container bg-light">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="./index.html">Város</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./zold.html">Zöldterület</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" href="./pictures.html">Festmények</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./vue.html">VUE.js</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="./me.html">Rólam</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row p-4">
+			<div class="col">
+				<h2>Festmények</h2>
+				<p>Mostanában nincs alkalmam rajzolni, festeni, de volt ebben hét aktívabb évem. Amiket szeretek, illetve vállalhatónak tartok, most kiteszem ide:</p>
+			</div>
 		</div>
-	</nav>
-	<div class="row p-4">
-		<div class="col">
-			<h2>Festmények</h2>
-			<p>Mostanában nincs alkalmam rajzolni, festeni, de volt ebben hét aktívabb évem. Amiket szeretek, illetve vállalhatónak tartok, most kiteszem ide:</p> 
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/parduc.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Párduc</h3>
+				<p>Vannak benne hibák, de idáig az első számú kedvencem. Ezzel is töltöttem el a legtöbb időt, kb 3 hónapot.</p>
+			</div>
 		</div>
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/hid.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Árpád híd</h3>
+				<p>A párduc stílusában készült. Valami félre ment vele, úgy emlékszem hogy kidobtam.</p>
+			</div>
+		</div>
+
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/lepke.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Lepke</h3>
+			</div>
+		</div>
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/lepkenagy.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-6">
+				<h3>Lepke</h3>
+			</div>
+		</div>
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/nyug.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Nyugati</h3>
+				<p>Fotó alapján készült, amit a Város címszó alatt találsz.</p>
+			</div>
+		</div>
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/rkk.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Róbert károly körút</h3>
+				<p>Igazi nyaralóhely. Több közöm van hozzá mint egy tengerpathoz.</p>
+			</div>
+		</div>
+
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/liget.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-6">
+				<h3>Liget</h3>
+				<p>Nem a Városligetben van, de lehetne.</p>
+			</div>
+		</div>
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/anonimus.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Anonimus</h3>
+				<p>Hamár liget.</p>
+			</div>
+		</div>
+		<div class="row p-4">
+			<div class="col">
+				<img src="pictures/szem.jpg" alt="Los Angeles" style="width:100%">
+			</div>
+			<div class="col-8">
+				<h3>Szem</h3>
+				<p>Csak úgy, csináltam.</p>
+			</div>
+		</div>
+		<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+				<div class="modal-content">
+					<div class="modal-body p-0">
+						<img id="modalImage" src="" alt="" style="width:100%;height:auto;">
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.querySelectorAll('img').forEach(function (img) {
+				img.ondblclick = function () {
+					var modalImg = document.getElementById('modalImage');
+					modalImg.src = this.src;
+					modalImg.alt = this.alt;
+					var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+					modal.show();
+				};
+			});
+		</script>
 	</div>
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/parduc.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Párduc</h3>
-			<p>Vannak benne hibák, de idáig az első számú kedvencem. Ezzel is töltöttem el a legtöbb időt, kb 3 hónapot.</p>
-		</div>
-	</div>
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/hid.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Árpád híd</h3>
-			<p>A párduc stílusában készült. Valami félre ment vele, úgy emlékszem hogy kidobtam.</p> 
-		</div>
-	</div>
-	
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/lepke.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Lepke</h3>
-		</div>
-	</div>
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/lepkenagy.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-6">
-			<h3>Lepke</h3>
-		</div>
-	</div>	
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/nyug.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Nyugati</h3>
-			<p>Fotó alapján készült, amit a Város címszó alatt találsz.</p>
-		</div>
-	</div>
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/rkk.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Róbert károly körút</h3>
-			<p>Igazi nyaralóhely. Több közöm van hozzá mint egy tengerpathoz.</p> 
-		</div>
-	</div>
-	
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/liget.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-6">
-			<h3>Liget</h3>
-			<p>Nem a Városligetben van, de lehetne.</p>
-		</div>
-	</div>
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/anonimus.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Anonimus</h3>
-			<p>Hamár liget.</p> 
-		</div>
-	</div>
-	<div class="row p-4">
-		<div class="col">
-			<img src="pictures/szem.jpg" alt="Los Angeles" style="width:100%">
-		</div>
-		<div class="col-8">
-			<h3>Szem</h3>
-			<p>Csak úgy, csináltam.</p> 
-		</div>
-	</div>
-	
-</div>
 
 </body>
 </html>
