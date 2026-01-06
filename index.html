@@ -1,194 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>vargas</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>vargas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Roboto', Arial, sans-serif;
+            background: #f4f6fa;
+            color: #222;
+        }
+
+        .navbar {
+            background: #232946 !important;
+            border-radius: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 12px rgba(35,41,70,0.08);
+        }
+
+        .navbar-nav .nav-link {
+            color: #eebbc3 !important;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            transition: color 0.2s;
+        }
+
+            .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+                color: #fffffe !important;
+            }
+
+        h1, h2 {
+            color: #232946;
+            font-weight: 700;
+        }
+
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 2px 16px rgba(35,41,70,0.08);
+            margin-bottom: 2rem;
+            background: #fff;
+            transition: box-shadow 0.2s;
+        }
+
+            .card:hover {
+                box-shadow: 0 4px 32px rgba(35,41,70,0.16);
+            }
+
+        .card-img-top {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            cursor: pointer;
+            transition: filter 0.2s;
+        }
+
+            .card-img-top:hover {
+                filter: brightness(0.95);
+            }
+
+        .modal-content {
+            background: #232946;
+            border-radius: 1rem;
+        }
+
+        .modal-body img {
+            border-radius: 1rem;
+            background: #232946;
+        }
+
+        .container.bg-light {
+            background: transparent !important;
+        }
+
+        .intro-section {
+            margin-bottom: 2.5rem;
+            padding: 2rem 0 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 1.2rem;
+            }
+
+            .navbar {
+                margin-top: 0.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
+    <div class="container">
+        <nav class="navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold text-white" href="./index.html">vargas</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./index.html">Város</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./zold.html">Zöldterület</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pictures.html">Festmények</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./vue.html">VUE.js</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./me.html">Rólam</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-	<div class="container bg-light">
-		<nav class="navbar navbar-expand-sm bg-light navbar-light">
-			<div class="container bg-light">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link active" href="./index.html">Város</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./zold.html">Zöldterület</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./pictures.html">Festmények</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./vue.html">VUE.js</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="./me.html">Rólam</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<div class="row p-4">
-			<div class="col">
-				<h1>Város</h1>
-				<p>Itt hangulatképeket találsz, szigorúan Budapestről. Ezen belül is Angyalföldről illetve Budafokról. A nem feltétlen szép helyek szép pillanatait szeretem megörökíteni.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/beke.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Béke út</h2>
-				<p>Angyalföld egyik utolsó bérháza - kb 100 éves - előtt. Bizonyos pillanatokban ez az utca is tud gyönyörű lenni.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/margit.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Margit körút</h2>
-				<p>Nem szigorúan Angyalföld, de a 13. kerület határa. A Bem moziba menet, villamosra várva.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/karolyrobert.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Róbert Károly körút</h2>
-				<p>Ilyen egy hétfő reggel.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/nyugati.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Nyugati aluljáró</h2>
-				<p>Kicsit leamortizálódva ilyennek látszik a világ.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/blaha.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Blaha</h2>
-				<p>Kocsmából haza. Érthető, ha valaki a Blahamákra vágyódik. Future noir hangulatával a Blade runner c. film sem versenyezhet..</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/esoBeke1.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col">
-				<img src="city/esoBeke2.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-4">
-				<h2>Béke utca</h2>
-				<p>Ha már future noire..</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/rr.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Rákosrendező</h2>
-				<p>Jól nézd meg, mostmár az államé.(2025.01.22) Vagy a MÁV-é? Már nem a miénk.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/eszaki.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Északi összekötő híd</h2>
-				<p>Kabin szórakozóhely. Én szerettem amikor nem volt beépítve a pesti hídfő területe, de télen most is megtalálja a magányt, aki arra vágyik. Menjünk át!</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/jokai.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Jókai Mór utca</h2>
-				<p>Igazi budai hangulatú utca, Budafokon. Hajnal, kinek-kinek más jut eszébe róla.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/hold.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Nálunk</h2>
-				<p>Zsinóron húzza maga után a szívem.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/etele.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Etele út?</h2>
-				<p>Etele? út, ha tudja valaki, javítson ki. Még mindíg nem vagyok ismerős Budán. Valami ügyintézésből mentem haza, és szépek voltak a fények.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/bikas.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Bikás park</h2>
-				<p>Kis cyber punk hangulat. Elnézést a fotóalanyoktól, hogy híressé tettem őket.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/csepel.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Csepel sziget</h2>
-				<p>Csepel művek sosem pihen. Fények a Dunán... csak csók nem volt, mert futottam.</p>
-			</div>
-		</div>
-		<div class="row p-4">
-			<div class="col">
-				<img src="city/hajok.jpg" alt="Los Angeles" style="width:100%">
-			</div>
-			<div class="col-8">
-				<h2>Duna</h2>
-				<p>Mondhatnám hogy - Futni mentem. Csak szépek voltak fények, megint.</p>
-			</div>
-		</div>
-	</div>
-	<!-- Image Modal -->
-	<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered modal-lg">
-			<div class="modal-content">
-				<div class="modal-body p-0">
-					<img id="modalImage" src="" alt="" style="width:100%;height:auto;">
-				</div>
-			</div>
-		</div>
-	</div>
-	<script>
-		document.querySelectorAll('img').forEach(function (img) {
-			img.ondblclick = function () {
-				var modalImg = document.getElementById('modalImage');
-				modalImg.src = this.src;
-				modalImg.alt = this.alt;
-				var modal = new bootstrap.Modal(document.getElementById('imageModal'));
-				modal.show();
-			};
-		});
-	</script>
+        <section class="intro-section text-center">
+            <h1>Város</h1>
+            <p class="lead">Itt hangulatképeket találsz, szigorúan Budapestről. Ezen belül is Angyalföldről illetve Budafokról. A nem feltétlen szép helyek szép pillanatait szeretem megörökíteni.</p>
+        </section>
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/beke.jpg" class="card-img-top" alt="Béke út">
+                    <div class="card-body">
+                        <h2 class="card-title">Béke út</h2>
+                        <p class="card-text">Angyalföld egyik utolsó bérháza - kb 100 éves - előtt. Bizonyos pillanatokban ez az utca is tud gyönyörű lenni.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/margit.jpg" class="card-img-top" alt="Margit körút">
+                    <div class="card-body">
+                        <h2 class="card-title">Margit körút</h2>
+                        <p class="card-text">Nem szigorúan Angyalföld, de a 13. kerület határa. A Bem moziba menet, villamosra várva.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/karolyrobert.jpg" class="card-img-top" alt="Róbert Károly körút">
+                    <div class="card-body">
+                        <h2 class="card-title">Róbert Károly körút</h2>
+                        <p class="card-text">Ilyen egy hétfő reggel.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/nyugati.jpg" class="card-img-top" alt="Nyugati aluljáró">
+                    <div class="card-body">
+                        <h2 class="card-title">Nyugati aluljáró</h2>
+                        <p class="card-text">Kicsit leamortizálódva ilyennek látszik a világ.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/blaha.jpg" class="card-img-top" alt="Blaha">
+                    <div class="card-body">
+                        <h2 class="card-title">Blaha</h2>
+                        <p class="card-text">Kocsmából haza. Érthető, ha valaki a Blahamákra vágyódik. Future noir hangulatával a Blade runner c. film sem versenyezhet..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <div class="row g-0">
+                        <div class="col-6">
+                            <img src="city/esoBeke1.jpg" class="card-img-top" alt="Béke utca 1">
+                        </div>
+                        <div class="col-6">
+                            <img src="city/esoBeke2.jpg" class="card-img-top" alt="Béke utca 2">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Béke utca</h2>
+                        <p class="card-text">Ha már future noire..</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/rr.jpg" class="card-img-top" alt="Rákosrendező">
+                    <div class="card-body">
+                        <h2 class="card-title">Rákosrendező</h2>
+                        <p class="card-text">Jól nézd meg, mostmár az államé.(2025.01.22) Vagy a MÁV-é? Már nem a miénk.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/eszaki.jpg" class="card-img-top" alt="Északi összekötő híd">
+                    <div class="card-body">
+                        <h2 class="card-title">Északi összekötő híd</h2>
+                        <p class="card-text">Kabin szórakozóhely. Én szerettem amikor nem volt beépítve a pesti hídfő területe, de télen most is megtalálja a magányt, aki arra vágyik. Menjünk át!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/jokai.jpg" class="card-img-top" alt="Jókai Mór utca">
+                    <div class="card-body">
+                        <h2 class="card-title">Jókai Mór utca</h2>
+                        <p class="card-text">Igazi budai hangulatú utca, Budafokon. Hajnal, kinek-kinek más jut eszébe róla.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/hold.jpg" class="card-img-top" alt="Nálunk">
+                    <div class="card-body">
+                        <h2 class="card-title">Nálunk</h2>
+                        <p class="card-text">Zsinóron húzza maga után a szívem.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/etele.jpg" class="card-img-top" alt="Etele út?">
+                    <div class="card-body">
+                        <h2 class="card-title">Etele út?</h2>
+                        <p class="card-text">Etele? út, ha tudja valaki, javítson ki. Még mindíg nem vagyok ismerős Budán. Valami ügyintézésből mentem haza, és szépek voltak a fények.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/bikas.jpg" class="card-img-top" alt="Bikás park">
+                    <div class="card-body">
+                        <h2 class="card-title">Bikás park</h2>
+                        <p class="card-text">Kis cyber punk hangulat. Elnézést a fotóalanyoktól, hogy híressé tettem őket.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/csepel.jpg" class="card-img-top" alt="Csepel sziget">
+                    <div class="card-body">
+                        <h2 class="card-title">Csepel sziget</h2>
+                        <p class="card-text">Csepel művek sosem pihen. Fények a Dunán... csak csók nem volt, mert futottam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="city/hajok.jpg" class="card-img-top" alt="Duna">
+                    <div class="card-body">
+                        <h2 class="card-title">Duna</h2>
+                        <p class="card-text">Mondhatnám hogy - Futni mentem. Csak szépek voltak fények, megint.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image Modal -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body p-0">
+                        <img id="modalImage" src="" alt="" style="width:100%;height:auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.card-img-top').forEach(function (img) {
+            img.ondblclick = function () {
+                var modalImg = document.getElementById('modalImage');
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+                modal.show();
+            };
+        });
+    </script>
 </body>
-
 </html>
